@@ -1,0 +1,750 @@
+---
+title: "Final Project"
+author: "Paula Guillermina Marto"
+date: "December 2024"
+format: 
+  pdf:
+    include-in-header: 
+       text: |
+         \usepackage{fvextra}
+         \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+         \usepackage[margin=1in]{geometry}  
+include-before-body:
+  text: |
+    \RecustomVerbatimEnvironment{verbatim}{Verbatim}{
+      showspaces = false,
+      showtabs = false,
+      breaksymbolleft={},
+      breaklines
+    }
+execute:
+  echo: false
+  eval: true
+---
+
+
+
+**Section**: PPHA 30538
+
+**GitHub Username**: pguillerminamarto
+
+
+```{python}
+import pandas as pd
+import altair as alt
+import time
+import os
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from shapely.geometry import Point
+
+import warnings 
+warnings.filterwarnings('ignore')
+alt.renderers.enable("png")
+```
+
+```{python}
+import pandas as pd
+
+# Define the list of specific files to combine
+specific_files = [
+    "./data/17_teatro.xlsx-datos-abiertos.csv",
+    "./data/centros_culturales.csv",
+    "./data/libreria.csv",
+    "./data/salas_cine.csv",
+    "./data/bibliotecas-populares.csv",
+    "./data/casas-del-bicentenario.csv"
+]
+
+# Define the columns to keep
+columns_to_keep = [
+    "id_provincia",
+    "id_departamento",
+    "categoria",
+    "provincia",
+    "departamento",
+    "localidad",
+    "latitud",
+    "longitud"
+]
+
+# Translation mapping for column values and names
+translation_dict = {
+    "categoria": {
+        "Salas de Teatro": "Theater",
+        "Centro Cultural": "Cultural Center",
+        "Librerias": "Bookstore",
+        "Espacios de Exhibición Patrimonial": "Heritage Exhibition Spaces",
+        "Salas de cine": "Cinema",
+        "Biblioteca Popular": "Popular Library",
+        "Casas de la Cultura y el Bicentenario": "Bicentennial House"
+    }
+}
+
+column_translation = {
+    "id_provincia": "province_id",
+    "id_departamento": "department_id",
+    "categoria": "category",
+    "provincia": "province",
+    "departamento": "department",
+    "localidad": "locality",
+    "latitud": "latitude",
+    "longitud": "longitude"
+}
+
+# Initialize an empty DataFrame to combine all datasets
+cultural_data = pd.DataFrame()
+
+# Loop through each file and append relevant columns
+for file in specific_files:
+    try:
+        # Read the dataset
+        data = pd.read_csv(file)
+        
+        # Keep only the specified columns if they exist in the dataset
+        filtered_data = data[[col for col in columns_to_keep if col in data.columns]]
+        
+        # Append to the combined DataFrame
+        cultural_data = pd.concat([cultural_data, filtered_data], ignore_index=True)
+    except Exception as e:
+        print(f"Error processing file {file}: {e}")
+
+# Apply translations for column values
+for column, translation in translation_dict.items():
+    if column in cultural_data.columns:
+        cultural_data[column] = cultural_data[column].map(translation).fillna(cultural_data[column])
+
+# Apply translations for column names
+cultural_data.rename(columns=column_translation, inplace=True)
+
+# Clear intermediate variables
+del data
+del filtered_data
+del columns_to_keep
+del translation
+del translation_dict
+del file
+del column
+del column_translation
+del specific_files
+
+```
+
+# Introduction
+
+## The Importance of Cultural Accessibility
+Cultural spaces, such as theaters, libraries, and cultural centers, are not just physical locations; they are hubs of knowledge, creativity, and community building. They act as bridges between tradition and innovation, offering a platform for preserving cultural heritage while fostering modern artistic expressions. In Argentina, these spaces are especially significant given the country’s rich history of cultural diversity and its dynamic socio-economic landscape.
+
+## Why Study Cultural and Educational Interactions?
+Education and culture are deeply interconnected. Access to cultural resources can enhance learning experiences, broaden perspectives, and foster a sense of belonging. This relationship is particularly relevant in a country like Argentina, where stark regional inequalities exist. By studying the distribution and impact of cultural spaces, we aim to uncover patterns that could inform policies for equitable resource allocation and improved educational outcomes.
+
+## A Socio-Cultural Snapshot of Argentina
+Argentina is characterized by a vibrant cultural heritage, influenced by indigenous traditions, European migration, and modern artistic movements. However, this cultural richness is unevenly distributed across the country. While Buenos Aires is internationally recognized as a cultural capital, rural areas and provinces in the Northeast (NEA) and Northwest (NOA) struggle with limited access to cultural and educational resources. This study seeks to map these inequalities and understand their implications.
+
+# Contextual Background
+
+## Cultural Policies in Argentina
+Argentina's cultural policies are rooted in the principles of decentralization and federalism. The National Constitution empowers provinces to govern their own cultural affairs, leading to diverse regional approaches. National initiatives like the Registro Federal de Cultura (RFC) aim to centralize data and provide an overarching framework, but the implementation and impact of such policies vary significantly across regions.
+
+## The Registro Federal de Cultura (RFC)
+Established in 2021, the RFC represents a landmark initiative to catalog and monitor cultural spaces nationwide. It serves as a tool for identifying gaps and directing resources where they are most needed. As of 2023, the RFC had documented over 6,405 cultural spaces, ranging from popular libraries in small towns to large-scale theaters in metropolitan areas.
+
+
+# Research Question
+
+**How do cultural spaces influence school attendance rates across different regions of Argentina, and what socio-economic factors mediate this relationship?**
+
+
+# Data and Methodology
+
+## **Educational Data: National Census of Population, Households, and Housing 2022**
+
+The educational data originates from the **2022 National Census of Population, Households, and Housing in Argentina (Census 2022)**. This dataset provides a detailed nationwide perspective on school attendance rates for children aged **4 to 17 years**, broken into age groups:
+
+- **4-5 years old**: Pre-primary education.
+
+- **6-11 years old**: Primary education.
+
+- **12-14 years old**: Lower secondary education.
+
+- **15-17 years old**: Upper secondary education.
+
+This dataset serves as a crucial foundation for analyzing educational accessibility and outcomes across Argentina. Its granularity allows for exploration at the **country, province, and department levels**, enabling identification of regional disparities and correlations with socio-economic conditions.
+
+
+## **Cultural Data: Cultural Information System of Argentina**
+
+The cultural data is sourced from the **Cultural Information System of Argentina**, managed by the Ministry of Culture. This dataset captures the distribution of **cultural spaces** across the country, including:
+
+- **Theaters**
+
+- **Cultural Centers**
+
+- **Libraries**
+
+- **Cinemas**
+
+- **Popular Libraries**
+
+- **Bicentennial Houses**
+
+Each cultural space is georeferenced, allowing for spatial analysis of its location and accessibility. The dataset includes:
+
+- **Geographical identifiers**: Province, department (except one dataset), locality.
+
+- **Latitude and longitude**: For mapping and spatial visualizations.
+
+- **Category of cultural space**: Enabling focused analyses.
+
+The data was consolidated from multiple sources to ensure comprehensive coverage of Argentina's cultural infrastructure.
+
+
+## **Unit of Analysis**
+
+This study adopts a hierarchical structure for its analysis:
+
+1. **Country Level**: National trends and patterns.
+
+2. **Province Level**: Variations between Argentina’s provinces.
+
+3. **Department Level**: Granular, localized trends within administrative units.
+
+This structure ensures both macro-level insights and community-specific details are captured. The charts are showed by department-level
+
+## **Methodology**
+
+### **Data Integration**
+- The cultural datasets were consolidated into a single file. Since these datasets included latitude and longitude information, they were matched with an INDEC dataset containing department IDs and names. This step was crucial because one of the cultural datasets only included department codes without the corresponding names. By merging this information with the INDEC dataset, which provided both codes and names, we ensured accurate geographic identification and consistency across all datasets.
+
+- Educational data from Census 2022 was merged with the cultural dataset using geographical identifiers (department id).
+
+- Datasets were harmonized and translated to ensure consistency.
+
+### **Geospatial Analysis**
+- Cultural spaces were mapped using latitude and longitude to visualize their distribution.
+
+- Educational attendance rates were overlaid to explore spatial correlations.
+
+```{python}
+# | output: false
+## Map cultural spaces
+# Step 1: Load the shapefile of Argentina
+argentina_shapefile = "./data/departamentos_indec/departamentos_indec.shp"
+argentina_gdf = gpd.read_file(argentina_shapefile)
+
+# Step 2: Filter out Antarctica and small islands, but keep Malvinas
+# Define bounds for mainland Argentina (approximate)
+min_latitude = -55  # Southern limit (Antarctica excluded)
+max_latitude = -20  # Northern limit
+min_longitude = -75  # Western limit (Chile border)
+max_longitude = -50  # Eastern limit
+
+# Add a specific condition to retain Malvinas Islands
+def filter_geometries(geometry):
+    bounds = geometry.bounds
+    # Check if the geometry is within the mainland bounds
+    within_bounds = (
+        bounds[1] > min_latitude and
+        bounds[3] < max_latitude and
+        bounds[0] > min_longitude and
+        bounds[2] < max_longitude
+    )
+    # Retain Malvinas Islands (approximate coordinates: around -51 latitude, -59 longitude)
+    is_malvinas = bounds[1] < -50 and bounds[3] > -55 and bounds[0] > -60 and bounds[2] < -57
+    return within_bounds or is_malvinas
+
+# Apply the filter to the shapefile
+argentina_gdf_filtered = argentina_gdf[argentina_gdf["geometry"].apply(filter_geometries)]
+
+# Step 3: Convert the cultural_data_translated DataFrame into a GeoDataFrame
+# Assuming cultural_data_translated has 'latitude' and 'longitude' columns
+cultural_data["geometry"] = cultural_data.apply(
+    lambda row: Point(row["longitude"], row["latitude"]), axis=1
+)
+cultural_gdf = gpd.GeoDataFrame(cultural_data, geometry="geometry", crs="EPSG:4326")
+
+# Step 4: Plot the map
+fig, ax = plt.subplots(figsize=(15, 15))
+
+# Plot the filtered shapefile of Argentina
+argentina_gdf_filtered.plot(ax=ax, color="lightgrey", edgecolor="black", alpha=0.5)
+
+# Plot each category with a different color and add a legend
+categories = cultural_gdf["category"].unique()
+for category in categories:
+    category_gdf = cultural_gdf[cultural_gdf["category"] == category]
+    category_gdf.plot(
+        ax=ax,
+        markersize=30,  # Adjust the size of the markers
+        label=category,  # Label for the legend
+        alpha=0.7
+    )
+
+# Add map details
+plt.title("Cultural Spaces in Argentina by Category (Translated)", fontsize=16)
+plt.legend(title="Categories", fontsize=10, loc="lower right")  # Add legend in bottom-right corner
+plt.xlabel("Longitude")
+plt.ylabel("Latitude")
+
+# Save the map to a file
+output_path = "./pictures/cultural_spaces_map_translated_with_legend_filtered.png"
+plt.savefig(output_path, dpi=300, bbox_inches="tight")
+
+# Show the map
+plt.show()
+
+## Save the cultural gdf as a JSON
+# Define the folder to save the files
+cultural_folder = "./data/cultural_shp"
+
+# Create the folder if it doesn't exist
+os.makedirs(cultural_folder, exist_ok=True)
+
+# Save the GeoDataFrame as a Shapefile
+shapefile_path = os.path.join(cultural_folder, "cultural_shapefile.shp")
+cultural_gdf.to_file(shapefile_path, driver="ESRI Shapefile")
+
+# Save the GeoDataFrame as GeoJSON
+geojson_path = os.path.join(cultural_folder, "cultural_shapefile.geojson")
+cultural_gdf.to_file(geojson_path, driver="GeoJSON")
+
+# Clear intermediate variables
+
+del min_latitude
+del max_latitude
+del min_longitude
+del max_longitude
+del output_path
+del categories
+del category
+del category_gdf
+del fig
+del ax
+del argentina_shapefile
+
+```
+
+# Charts
+```{python}
+from IPython.display import Image, display
+
+# Define the path to the image
+image_path = "/Users/guillerminamarto/Documents/GitHub/Final_Project/pictures/cultural_spaces_with_pampas.png"
+
+# Display the image
+display(Image(filename=image_path, width=500))
+
+```
+
+# Cultural Spaces and Economic Wealth in Argentina: Spotlight on the Pampas Region
+
+The **Pampas region**, comprising **Buenos Aires**, **Santa Fe**, and **La Pampa**, demonstrates significantly higher access to cultural spaces compared to other regions in Argentina. This area boasts a **high density of cultural facilities** such as theaters, bookstores, and libraries, particularly in urban centers like **Buenos Aires City** and **Rosario**. As the wealthiest area in the country, the Pampas region contributes the largest share of Argentina's GDP. It is known for its strong agricultural production, industry, and urbanization, and houses the highest population density, which drives the demand for extensive cultural infrastructure.
+
+In terms of **functional diversity**, libraries and cultural centers dominate in rural areas, providing essential cultural services to smaller communities. In contrast, urban centers host a broader variety of spaces, including theaters and cinemas, catering to diverse cultural interests and larger populations.
+
+These patterns reflect the relationship between economic prosperity, urbanization, and the development of cultural infrastructure. The concentration of cultural spaces in affluent regions emphasizes the importance of cultural policy aimed at maintaining access while exploring ways to diversify cultural opportunities nationwide.
+
+# Educational and Cultural Disparities Across Regions
+
+School attendance rates show significant variations across Argentina's provinces. Wealthier regions like the Pampas, including Buenos Aires and Santa Fe, tend to exhibit higher attendance rates, bolstered by superior infrastructure, economic resources, and well-developed transportation networks. In contrast, provinces within the Northeast Argentina (NEA) and Northwest Argentina (NOA) regions, such as Formosa, Chaco, and Corrientes, face persistent challenges. These include limited access to resources, higher levels of poverty, and logistical barriers, which hinder consistent educational engagement.
+
+## Cultural Infrastructure and Regional Context
+
+From the cultural spaces map, it is evident that while there is a presence of cultural spaces in regions like NEA and NOA, these spaces are not necessarily translating into higher educational outcomes. For instance, cultural spaces like libraries and cultural centers are present in these regions, but systemic challenges may limit their impact on education. This disparity highlights the need for deeper analysis to understand whether cultural access complements educational outcomes effectively.
+
+## Linking Cultural Access to Education
+
+The interplay between cultural infrastructure and educational outcomes raises critical questions:
+- Does proximity to cultural spaces foster better attendance or engagement in schools? 
+- Are cultural spaces effectively utilized, or are systemic barriers, such as poverty and transportation, overriding their potential benefits?
+
+While the Pampas region benefits from both cultural richness and high school attendance rates, the NEA and NOA regions reveal a gap that warrants further investigation.
+
+
+```{python}
+
+# Step 1: Load the "pob educativa.csv" dataset
+pop_educ_file = "./data/education pop 4-17.csv"
+pop_educ_df = pd.read_csv(pop_educ_file)
+
+# Step 2: Merge the shapefile with the educational data
+# Use 'nam' in argentina_gdf and 'department' in pop_educ_df for the merge
+merged_gdf = argentina_gdf.merge(
+    pop_educ_df, left_on="nam", right_on="department", how="left"
+)
+
+```
+
+
+```{python}
+# | output: false
+# Plot the average attendance rate map 
+fig, ax = plt.subplots(figsize=(15, 15))
+
+# Plot the departments with educational data
+merged_gdf.plot(
+    ax=ax,
+    column="avg attendance rate",
+    cmap="YlGnBu",
+    legend=True,
+    edgecolor="black"
+)
+
+# Add map details
+plt.title("Educational Data by Department in Argentina average 4-17 years(in percentage)", fontsize=14)
+plt.xlabel("Longitude")
+plt.ylabel("Latitude")
+
+# Save the map
+plt.savefig("./pictures/educational_data_map_by_department (average 4-17).png", dpi=300, bbox_inches="tight")
+```
+
+
+
+```{python}
+# Path to the image
+from IPython.display import Image, display
+
+# Path to the image
+image_educ_map = "/Users/guillerminamarto/Documents/GitHub/Final_Project/pictures/educ_map_with_nea.png"
+
+# Display the image with a smaller size
+display(Image(filename=image_educ_map, width=570)) 
+
+
+```
+
+## Moving Forward
+
+These observations lead to two key next steps:
+
+1. **Shiny App Analysis:** The interactive Shiny app allows for an in-depth exploration of cultural and educational data at the provincial and departmental levels. This granular approach can help identify specific local dynamics that broader national trends might obscure.
+
+2. **Correlation Analysis:** By examining correlations between the number of cultural spaces and school attendance rates, we aim to uncover broader patterns. This can inform whether cultural investments are associated with measurable improvements in educational outcomes.
+
+This dual focus—detailed local exploration and broader statistical correlation—enables a nuanced understanding of the relationship between cultural infrastructure and educational access. It highlights the potential for targeted interventions to bridge the gaps evident in regions like NEA and NOA while reinforcing the positive outcomes observed in wealthier provinces.
+
+```{python}
+### Create the id for the departments
+# Select the first 8 columns from the GeoDataFrame
+columns_to_extract = argentina_gdf.columns[:8]  # The first 8 columns
+departments_id = argentina_gdf[columns_to_extract]  # Create the DataFrame with these columns
+
+# Ensure the 'cde' column is a string
+departments_id["cde"] = departments_id["cde"].astype(str)
+
+# Remove only the first leading zero, if it exists
+departments_id["cde"] = departments_id["cde"].str.replace("^0", "", regex=True)
+
+```
+
+
+
+```{python}
+### Assign departments ID's to the education dataset
+# Match pop_educativa_df 'province' and 'departamentt' with departments 'jurisdic' and 'nam'
+pop_educ_with_departments = pop_educ_df.merge(
+    departments_id[['cde', 'jurisdic', 'nam']],  # Select relevant columns from idepartments_id
+    left_on=['province', 'department'],     # Match 'province' and 'departamento' in pop_educ_df
+    right_on=['jurisdic', 'nam'],                 # Match 'jurisdic' and 'nam' in departments_id
+    how='left'                                    # Left join to preserve all rows from pop_educdf
+)
+
+```
+
+
+```{python}
+## Sum the categories
+# Step 1: Group cultural data to count categories by province and department
+cultural_counts = cultural_data.groupby(['province', 'department_id', 'category']).size().reset_index(name='count')
+
+# Step 2: Pivot the table to have one column per cultural category
+cultural_pivot = cultural_counts.pivot_table(
+    index=['province', 'department_id'],
+    columns='category',
+    values='count',
+    fill_value=0
+).reset_index()
+
+# Step 3: Convert columns to consistent types for merging
+pop_educ_with_departments['cde'] = pop_educ_with_departments['cde'].astype(str)
+cultural_pivot['department_id'] = cultural_pivot['department_id'].astype(str)
+
+# Step 4: Merge the datasets again with consistent column types
+merged_data = pd.merge(
+    pop_educ_with_departments,
+    cultural_pivot,
+    left_on=['cde', 'jurisdic'],
+    right_on=['department_id', 'province'],
+    how='left'
+)
+
+# Step 5: Replace NaN values with 0 for cultural counts
+merged_data.fillna(0, inplace=True)
+
+# Step 6: Add a column that sums all cultural category counts for each department_id
+cultural_columns = cultural_pivot.columns.difference(['province', 'department_id'])
+merged_data['total_cultural_spaces'] = merged_data[cultural_columns].sum(axis=1)
+
+```
+
+
+
+```{python}
+## Base para charts
+# Convert columns to the same data type
+pop_educ_with_departments["cde"] = pop_educ_with_departments["cde"].astype(str)
+cultural_data["department_id"] = cultural_data["department_id"].astype(str)
+cultural_data["department_id"] = cultural_data["department_id"].astype(str)
+
+# Rename 'cde' in pop_educ_with_departments to match 'department_id'
+pop_educ_with_departments.rename(columns={"cde": "department_id"}, inplace=True)
+
+# Group cultural data by department_id and category
+cultural_counts = cultural_data.groupby(["department_id", "category"]).size().reset_index(name="num_cultural_spaces")
+
+# Merge the cultural counts with the educational data
+merged_with_education = pop_educ_with_departments.merge(cultural_counts, on="department_id", how="left")
+
+
+```
+
+
+
+```{python}
+## Charts
+# Scatter
+scatter = alt.Chart(merged_with_education).mark_circle(size=100).encode(
+    x=alt.X('num_cultural_spaces:Q', title='Number of Cultural Spaces'),  # Correct column for cultural spaces
+    y=alt.Y('avg attendance rate:Q', title='Attendance Rate'),  # Correct column for attendance rates
+    color=alt.Color('category:N', legend=alt.Legend(title='Cultural Category')),  # Cultural categories
+    tooltip=['province:N', 'category:N', 'num_cultural_spaces:Q', 'attendance_rate:Q']  # Tooltips for details
+).properties(
+    title='Correlation Between Cultural Spaces and Attendance',
+    width=600,
+    height=400
+)
+
+# Save the scatter plot
+output_path = "./pictures/scatter_plot_cultural_attendance.png"
+scatter.save(output_path, format="png")
+
+scatter
+
+```
+
+
+
+```{python}
+## Calculate correlations
+# Calculate the correlation for each category
+correlations = merged_with_education.groupby("category").apply(
+    lambda df: df['num_cultural_spaces'].corr(df['avg attendance rate'])
+).reset_index(name="correlation")
+
+# Display the calculated correlations
+correlations_display = correlations.sort_values("correlation", ascending=False)
+
+correlations_display
+
+```
+
+
+
+```{python}
+## Educational chart
+# Group data by province and calculate the average attendance rate
+education_by_jurisdiction = pop_educ_df.groupby("province").agg(
+    avg_attendance=("avg attendance rate", "mean")
+).reset_index()
+
+# Create a bar chart for attendance rates by province
+education_chart = alt.Chart(education_by_jurisdiction).mark_bar().encode(
+    x=alt.X('avg_attendance:Q', title='Average Attendance Rate'),
+    y=alt.Y('province:N', title='province', sort='-x'),
+    color=alt.Color('avg_attendance:Q', scale=alt.Scale(scheme='blues')),
+    tooltip=['province:N', 'avg_attendance:Q']
+).properties(
+    title="Average Attendance Rates by province",
+    width=700,
+    height=400
+)
+
+plt.show()
+
+# Save the chart as a PNG file
+output_folder = "./pictures"
+os.makedirs(output_folder, exist_ok=True)
+output_path = os.path.join(output_folder, "average_attendance_rates.png")
+
+```
+
+## Correlation Between Cultural Spaces and Attendance Rates
+
+### Observations
+
+1. **Low Correlation Between Number of Cultural Spaces and Attendance**  
+   The scatter plot reveals that the relationship between the number of cultural spaces and attendance rates is weak. Attendance rates remain relatively high across provinces, even where there are few cultural spaces.  
+
+   - **Examples:**
+     - In **Loreto, Santiago del Estero**, a department with only one cultural space, attendance rates are consistent across all age groups.
+     - In **Santiago del Estero Province**, the total number of cultural spaces increases to 67, but attendance rates still hover within a similar range.
+     - **Buenos Aires Province**, with its dense urban centers and the highest concentration of cultural spaces (over 1,500), does not exhibit proportionally higher attendance rates.
+
+2. **Functional Diversity**  
+   Urban centers like Buenos Aires exhibit a more diverse set of cultural spaces, including theaters and cinemas, which may target broader demographics. Rural areas, such as Loreto, often host fewer but essential spaces like libraries or cultural centers.
+
+3. **High Baseline Attendance Rates**  
+   School attendance rates across provinces tend to stay consistently high, with averages above 85%, regardless of cultural space density. This baseline reduces the impact that variations in cultural spaces might have on attendance rates, as shown above.
+
+```{python}
+education_chart 
+```
+
+
+### Factors Influencing Weak Correlation
+
+- **Quality Over Quantity**  
+  The presence of high-quality, accessible cultural spaces may drive attendance more effectively than the sheer number of spaces. Rural libraries and community centers, for example, may serve as focal points for educational engagement without requiring numerous facilities. For instance the popular library in Loreto may not have the same quality as one in Buenos Aires. 
+
+- **Demographics and Infrastructure**  
+  Urban centers naturally have more cultural spaces due to higher population density and infrastructure. However, these areas also have more alternative educational and recreational options, which may dilute the influence of cultural spaces on school attendance.
+
+### Visual Examples
+
+Below are some illustrative examples highlighting these observations:
+
+```{python}
+image_scatter = "/Users/guillerminamarto/Documents/GitHub/Final_Project/pictures/Buenos Aires.png"
+
+# Display the image 
+display(Image(filename=image_scatter, width=600))
+
+image_santiago = "/Users/guillerminamarto/Documents/GitHub/Final_Project/pictures/Santiago del Estero.png"
+
+# Display the image 
+display(Image(filename=image_santiago, width=600))
+
+# Define the path to the image
+image_loreto = "/Users/guillerminamarto/Documents/GitHub/Final_Project/pictures/Loreto.png"
+
+# Display the image 
+display(Image(filename=image_loreto, width=600))
+```
+
+
+
+
+
+
+
+```{python}
+## Prepare the dataset for the Shiny App
+def recalculate_totals(data):
+    total_rows = data[(data['department'] == 'Total Province')]
+
+    for index, row in total_rows.iterrows():
+        if row['province'] == 'Total Country':
+            # Calculate averages for all categories across all provinces
+            avg_value = data[data['category'] == row['category']]['avg attendance rate'].mean()
+            avg_4_5 = data[data['category'] == row['category']]['4 to 5 years'].mean()
+            avg_6_11 = data[data['category'] == row['category']]['6 to 11 years'].mean()
+            avg_12_14 = data[data['category'] == row['category']]['12 to 14 years'].mean()
+            avg_15_17 = data[data['category'] == row['category']]['15 to 17 years'].mean()
+        else:
+            # Calculate averages for all departments within the specific jurisdiction
+            avg_value = data[
+                (data['province'] == row['province']) &
+                (data['category'] == row['category'])
+            ]['avg attendance rate'].mean()
+            avg_4_5 = data[
+                (data['province'] == row['province']) &
+                (data['category'] == row['category'])
+            ]['4 to 5 years'].mean()
+            avg_6_11 = data[
+                (data['province'] == row['province']) &
+                (data['category'] == row['category'])
+            ]['6 to 11 years'].mean()
+            avg_12_14 = data[
+                (data['province'] == row['province']) &
+                (data['category'] == row['category'])
+            ]['12 to 14 years'].mean()
+            avg_15_17 = data[
+                (data['province'] == row['province']) &
+                (data['category'] == row['category'])
+            ]['15 to 17 years'].mean()
+
+        # Update the values in the same columns
+        data.loc[index, 'avg attendance rate'] = avg_value
+        data.loc[index, '4 to 5 years'] = avg_4_5
+        data.loc[index, '6 to 11 years'] = avg_6_11
+        data.loc[index, '12 to 14 years'] = avg_12_14
+        data.loc[index, '15 to 17 years'] = avg_15_17
+
+    return data
+
+# Total Country (sum of cultural spaces, average attendance rates for 12-14 and 15-17)
+total_country = merged_with_education.groupby("category").agg(
+    num_cultural_spaces=("num_cultural_spaces", "sum"),
+    avg=("avg attendance rate", "mean")
+).reset_index()
+total_country["province"] = "Total Country"
+total_country["department"] = "Total Province"
+
+# Totals by province
+totals_by_province = merged_with_education.groupby(["province", "category"]).agg(
+    num_cultural_spaces=("num_cultural_spaces", "sum"),
+    avg=("avg attendance rate", "mean"),
+).reset_index()
+totals_by_province["department"] = "Total Province"
+
+# Combine totals with the original dataset
+final_data = pd.concat([merged_with_education, totals_by_province, total_country], ignore_index=True)
+
+# Recalculate totals for missing 'avg attendance rate', '12 to 14 years', and '15 to 17 years' values in the same columns
+final_data = recalculate_totals(final_data)
+
+# Eliminate specific unnecessary columns ('nam', 'jurisdic') before saving
+columns_to_drop = ['nam', 'jurisdic']  # Specify the columns to remove
+final_data = final_data.drop(columns=columns_to_drop, errors='ignore')
+
+# Save the prepared dataset for Shiny
+final_data.to_csv("./data/shiny_ready_data.csv", index=False)
+
+```
+
+```{python}
+# Clean and delete unnecesary files
+
+del total_country
+del totals_by_province
+del pop_educ_file
+del cultural_columns
+del columns_to_drop
+del columns_to_extract
+del cultural_counts
+del education_by_jurisdiction
+del cultural_pivot
+```
+
+# Findings
+
+- **Wealthy Provinces Dominate**: Buenos Aires, Córdoba, and Santa Fe account for the majority of cultural spaces, reflecting their economic and infrastructural advantages.
+- **Sparse Distribution in Rural Areas**: Provinces in the NEA and NOA, such as Formosa and Chaco, show a severe lack of cultural resources, mirroring broader socio-economic inequalities.
+- The findings emphasize the importance of **quality and accessibility** of cultural spaces rather than merely increasing their number.
+- There is a need to explore the role of **community engagement, program offerings, and location** of cultural spaces to better understand their relationship with educational outcomes.
+
+# Policy Implications
+
+- **Mobile Cultural Units**: Deploy mobile libraries and theaters to reach underserved communities.
+- **Community Engagement**: Empower local stakeholders to manage and sustain cultural spaces.
+- **Integrated Programs**: Combine cultural and educational initiatives to foster engagement and learning.
+- **Infrastructure Investment**: Prioritize resource allocation to regions with the greatest need.
+- Insights from the examples guide targeted interventions at the provincial and departmental levels, as demonstrated in the **Shiny App**. It enables stakeholders to explore correlations at granular levels and design more effective cultural and educational policies.
+
+
+# Future Directions
+
+- **Longitudinal Studies**: Track changes over time to better understand causal relationships, as we understand that correlation does not imply causation, and additional data would be needed to establish causal links.
+- **Expanded Indicators**: Incorporate metrics like income levels, transportation access, and digital connectivity.
+- **Policy Experimentation**: Test interventions, such as subsidized cultural programs, to evaluate their impact on school attendance rates.

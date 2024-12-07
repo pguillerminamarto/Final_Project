@@ -1,0 +1,528 @@
+﻿department,province,4 to 5 years,6 to 11 years,12 to 14 years,15 to 17 years,avg attendance rate
+Chical Co,La Pampa,100,98,97.6,100,98.9
+Lihuel Calel,La Pampa,94.1,100,96.2,100,97.6
+Limay Mahuida,La Pampa,100,100,100,100,100
+Corpen Aike,Santa Cruz,96.9,98.9,97.9,97.7,97.9
+Maipú,Buenos Aires,98.2,98.7,98.2,97.7,98.2
+Comuna 12,Ciudad Autónoma de Buenos Aires,97.5,98.3,98.2,97.3,97.8
+Salliqueló,Buenos Aires,98.8,98.7,95.9,97,97.6
+Comuna 10,Ciudad Autónoma de Buenos Aires,97.4,98.4,98.4,96.9,97.8
+Comuna 11,Ciudad Autónoma de Buenos Aires,97.4,98.1,98.3,96.9,97.7
+Comuna 13,Ciudad Autónoma de Buenos Aires,97.8,98.3,98.5,96.9,97.9
+Comuna 7,Ciudad Autónoma de Buenos Aires,96.7,98.1,98,96.9,97.4
+Minas,Neuquén,97.8,98.4,98.6,96.9,97.9
+Comuna 14,Ciudad Autónoma de Buenos Aires,97.3,97.8,98.2,96.8,97.5
+Comuna 15,Ciudad Autónoma de Buenos Aires,97.8,98.5,98,96.8,97.8
+Comuna 2,Ciudad Autónoma de Buenos Aires,97.3,98.1,97.4,96.7,97.4
+Conhelo,La Pampa,99.1,99.6,99.4,96.7,98.7
+Futaleufú,Chubut,98.9,98.9,98.6,96.5,98.2
+Loventué,La Pampa,100,99.4,99.6,96.5,98.9
+Capital,La Pampa,99.1,99.5,99.2,96.3,98.5
+Comuna 6,Ciudad Autónoma de Buenos Aires,97.3,97.2,97.2,96.3,97
+Toay,La Pampa,99.5,99.5,99.5,96.3,98.7
+Vinchina,La Rioja,100,99.2,97.6,96.2,98.3
+Comuna 5,Ciudad Autónoma de Buenos Aires,97,97.6,97.7,96.1,97.1
+Curacó,La Pampa,93.9,100,100,96.1,97.5
+Utracán,La Pampa,98.9,99.2,99.1,96.1,98.3
+Escalante,Chubut,98.3,99.2,98.6,95.9,98
+Maracó,La Pampa,99.5,99.3,99,95.8,98.4
+Saavedra,Buenos Aires,99.2,99.1,98.7,95.8,98.2
+Rawson,Chubut,98.4,99.2,98.8,95.6,98
+Pilcaniyeu,Río Negro,98.7,98.6,98.3,95.5,97.8
+Puelén,La Pampa,97.9,99.4,99.4,95.5,98.1
+Lezama,Buenos Aires,98.3,99.3,97.9,95.4,97.7
+Río Grande,Tierra del Fuego. Antártida e Islas del Atlántico Sur,95.1,,96.8,95.4,95.8
+Adolfo Alsina,Río Negro,98.1,98.5,98.1,95.3,97.5
+Chalileo,La Pampa,98.9,100,99.3,95.3,98.4
+San Antonio,Río Negro,97,98.4,97.7,95.3,97.1
+Chos Malal,Neuquén,96.9,98,98.4,95.2,97.1
+La Paz,Mendoza,96.5,97.9,98.5,95.2,97
+Comuna 9,Ciudad Autónoma de Buenos Aires,97,97.7,97.3,95.1,96.8
+Cushamen,Chubut,97.2,98.8,98.7,95.1,97.5
+Morón,Buenos Aires,98,98.5,97.5,95.1,97.3
+Ñorquín,Neuquén,97.2,98.4,96.6,95.1,96.8
+Vicente López,Buenos Aires,97.4,97.5,96.5,95.1,96.6
+General Guido,Buenos Aires,98,97.2,89.6,95,95
+Comuna 3,Ciudad Autónoma de Buenos Aires,96.2,97.5,96.9,94.9,96.4
+Coronel de Marina Leonardo Rosales,Buenos Aires,96.9,97.8,96.8,94.9,96.6
+Ituzaingó,Buenos Aires,97.9,98.7,97.9,94.9,97.4
+Lago Argentino,Santa Cruz,95.6,97.3,97.3,94.9,96.3
+Santa Rosa,Mendoza,97.8,98.6,98.6,94.9,97.5
+Biedma,Chubut,98.1,98.7,97.9,94.8,97.4
+Punta Indio,Buenos Aires,98.9,98.5,96.9,94.8,97.3
+La Caldera,Salta,98.3,98.4,98.6,94.7,97.5
+Lácar,Neuquén,97.9,98.8,98.1,94.6,97.4
+Pehuenches,Neuquén,97.5,98.4,97.9,94.6,97.1
+San Isidro,Buenos Aires,97.4,97.9,96.9,94.6,96.7
+Ushuaia,Tierra del Fuego. Antártida e Islas del Atlántico Sur,,,96,94.6,95.3
+Ensenada,Buenos Aires,98,98.7,97.9,94.5,97.3
+Güer Aike,Santa Cruz,96,97.2,95.9,94.5,95.9
+Deseado,Santa Cruz,96.3,97.8,97.4,94.4,96.5
+Languiñeo,Chubut,100,99.2,97,94.4,97.7
+Rancul,La Pampa,99.2,99.3,98.7,94.4,97.9
+Berazategui,Buenos Aires,97.3,98.3,97,94.3,96.7
+Dolores,Buenos Aires,97.5,96.8,95.3,94.3,96
+General Lamadrid,La Rioja,98.3,98.2,97.5,94.3,97.1
+Malargüe,Mendoza,97.6,98.5,97.5,94.3,97
+Realicó,La Pampa,99.8,99.6,98.9,94.3,98.2
+San Blas de Los Sauces,La Rioja,98.4,99.5,99,94.3,97.8
+Tres de Febrero,Buenos Aires,97,97.9,96.8,94.3,96.5
+Campana,Buenos Aires,97.7,98.2,97,94.2,96.8
+Comuna 4,Ciudad Autónoma de Buenos Aires,97.1,98.4,97.2,94.2,96.7
+Godoy Cruz,Mendoza,97.2,98.1,97.8,94.2,96.8
+Trenel,La Pampa,100,99.4,99.2,94.2,98.2
+General Lavalle,Buenos Aires,97.8,98.2,96.8,94.1,96.7
+Puán,Buenos Aires,98.9,98.7,97.1,94.1,97.2
+Hurlingham,Buenos Aires,96.8,98,96.6,94,96.4
+Picunches,Neuquén,94.8,99.3,99,94,96.8
+Bariloche,Río Negro,98,98.5,97.3,93.9,96.9
+La Plata,Buenos Aires,96.8,98.2,96.7,93.9,96.4
+Río Senguer,Chubut,100,98.4,98.6,93.9,97.7
+Capital,Mendoza,95.5,96.1,95.9,93.8,95.3
+Capital,La Rioja,97.1,98.2,97.1,93.8,96.6
+Dr. Manuel Belgrano,Jujuy,94.6,96,96,93.8,95.1
+Rivadavia,Mendoza,97.2,97.8,97.1,93.8,96.5
+Avellaneda,Buenos Aires,97.1,98.2,96.9,93.7,96.5
+Berisso,Buenos Aires,98,98.3,96.5,93.7,96.6
+Caleu Caleu,La Pampa,100,98.9,98.7,93.7,97.8
+Confluencia,Neuquén,96.2,98.4,97.7,93.7,96.5
+Lago Buenos Aires,Santa Cruz,97.4,97.8,97.1,93.7,96.5
+Tandil,Buenos Aires,98.3,98.6,96.8,93.7,96.9
+Telsen,Chubut,100,98.6,95.7,93.7,97
+Los Lagos,Neuquén,98.5,99.2,97.4,93.5,97.2
+Quemú Quemú,La Pampa,97.5,99.4,99.8,93.5,97.6
+Bahía Blanca,Buenos Aires,97.7,98.1,96.9,93.4,96.5
+Capital,Salta,94,97.7,96.9,93.4,95.5
+Capital,San Juan,96.1,96.4,95.7,93.4,95.4
+Comuna 1,Ciudad Autónoma de Buenos Aires,94.7,96.8,96.7,93.4,95.4
+Gaiman,Chubut,99,99.2,98.8,93.4,97.6
+Guaymallén,Mendoza,96.6,97.7,97.3,93.4,96.3
+Palpalá,Jujuy,96,97.1,95.9,93.4,95.6
+Picún Leufú,Neuquén,97.4,97.9,97.8,93.4,96.6
+Adolfo Gonzales Chaves,Buenos Aires,98.5,99.3,97.5,93.3,97.2
+Chascomús,Buenos Aires,99,98.7,97.8,93.3,97.2
+Comuna 8,Ciudad Autónoma de Buenos Aires,96.2,97.6,97,93.3,96
+Baradero,Buenos Aires,98.2,97.9,96.4,93.2,96.4
+Exaltación de la Cruz,Buenos Aires,97,98.3,96.6,93.2,96.3
+Itatí,Corrientes,95.7,98.4,96.6,93.2,96
+Rinconada,Jujuy,94.9,93.4,97,93.2,94.6
+Capitán Sarmiento,Buenos Aires,99.1,98.7,96.9,93.1,97
+General Juan Madariaga,Buenos Aires,98,98.5,97.1,93.1,96.7
+Lanús,Buenos Aires,96.6,97.8,96.4,93.1,96
+Monte Hermoso,Buenos Aires,97.3,98.5,95.4,93.1,96.1
+San Pedro,Jujuy,94.3,97,96,93.1,95.1
+Santa María,Catamarca,98.6,98.5,98,93.1,97.1
+Valcheta,Río Negro,94.8,98.2,94.6,93.1,95.2
+General Pedernera,San Luis,96.6,97.7,97.2,93,96.1
+Guachipas,Salta,94.1,98.3,99.4,93,96.2
+Ramallo,Buenos Aires,98.7,98.1,97.3,93,96.8
+Rojas,Buenos Aires,97.9,97.9,94.9,93,95.9
+Tolhuin,Tierra del Fuego. Antártida e Islas del Atlántico Sur,,,93.6,93,93.3
+San Miguel,Buenos Aires,95,97.9,96.5,92.9,95.6
+Sarmiento,Chubut,98,99.1,98.8,92.9,97.2
+Capital,Catamarca,96.7,97.9,96.7,92.8,96
+Río Chico,Santa Cruz,97.1,96.1,96.3,92.8,95.6
+San Fernando,Buenos Aires,96.7,97.7,96,92.8,95.8
+Tres Arroyos,Buenos Aires,98.7,99,97.9,92.8,97.1
+Balcarce,Buenos Aires,98.7,98.4,96.7,92.7,96.6
+Collón Curá,Neuquén,96,97.1,97.4,92.7,95.8
+Paraná,Entre Ríos,97.4,98.2,97.4,92.7,96.4
+Quilmes,Buenos Aires,95.3,97.7,96.3,92.7,95.5
+Tapalqué,Buenos Aires,96.6,99.2,98,92.7,96.6
+Atreucó,La Pampa,99.7,99.8,99.6,92.6,97.9
+Ayacucho,Buenos Aires,98.4,98.2,97.5,92.6,96.7
+General Felipe Varela,La Rioja,96.9,98.7,98,92.6,96.6
+Juan Martín de Pueyrredón,San Luis,95.7,97,96.6,92.6,95.5
+Magdalena,Buenos Aires,97.1,98.2,96.8,92.6,96.2
+Patagones,Buenos Aires,98.4,98.8,97.6,92.6,96.9
+Zapala,Neuquén,95.5,97.4,96.3,92.6,95.5
+General Belgrano,Buenos Aires,96.7,98.3,97.3,92.5,96.2
+General Alvear,Buenos Aires,98.9,98.9,97.3,92.4,96.9
+General Las Heras,Buenos Aires,97.8,97.5,95.3,92.4,95.8
+Tigre,Buenos Aires,96.3,97.7,96.3,92.4,95.7
+General Belgrano,La Rioja,97.8,98.2,96.1,92.3,96.1
+General San Martín,Buenos Aires,96.5,97.7,95.9,92.3,95.6
+Mártires,Chubut,94.1,98.3,97.3,92.3,95.5
+Olavarría,Buenos Aires,97.7,97.9,96.6,92.3,96.1
+San Antonio de Areco,Buenos Aires,98.3,98.6,97.1,92.3,96.6
+General Alvarado,Buenos Aires,97.1,97.9,95,92.2,95.6
+General Roca,Río Negro,97.2,98.1,96.8,92.2,96.1
+Zárate,Buenos Aires,96.7,98,96.4,92.2,95.8
+Almirante Brown,Buenos Aires,94.5,97.9,96.5,92.1,95.3
+Avellaneda,Río Negro,97.8,98.8,96.8,92.1,96.4
+Colón,Buenos Aires,98.8,98.6,97.2,92.1,96.7
+Escobar,Buenos Aires,92.7,97.4,96.1,92.1,94.6
+Junín,Mendoza,96.7,96.8,96.3,92.1,95.5
+Lobería,Buenos Aires,96.1,98,95.6,92.1,95.5
+Luján de Cuyo,Mendoza,96.6,97.6,97.4,92.1,95.9
+Roque Pérez,Buenos Aires,99.3,99.6,97.9,92.1,97.2
+San Andrés de Giles,Buenos Aires,98,98.3,97,92.1,96.4
+Tehuelches,Chubut,98.4,99.5,96.6,92.1,96.7
+9 de Julio,Buenos Aires,97.7,98.1,96.5,92,96.1
+Aluminé,Neuquén,95.1,97.3,98,92,95.6
+Chivilcoy,Buenos Aires,97.9,98.1,96.8,92,96.2
+Malvinas Argentinas,Buenos Aires,94.4,97.6,96.3,92,95.1
+Necochea,Buenos Aires,97.7,98.6,96.9,92,96.3
+San Carlos,Mendoza,96.9,97.9,97.4,92,96.1
+9 de Julio,Río Negro,97.7,98,96.9,91.9,96.1
+General Pueyrredón,Buenos Aires,97.1,98,96.3,91.9,95.8
+La Viña,Salta,96.4,98.1,97.1,91.9,95.9
+Magallanes,Santa Cruz,97.5,98,96.8,91.9,96.1
+San Antonio,Jujuy,94.2,93.1,92.5,91.9,92.9
+Villa Gesell,Buenos Aires,96.6,98.1,96.1,91.9,95.7
+Ángel Vicente Peñaloza,La Rioja,100,98.8,95.2,91.8,96.5
+Brandsen,Buenos Aires,97.3,98.2,97,91.8,96.1
+Castelli,Buenos Aires,98.6,98.5,96.7,91.8,96.4
+Coronel Pringles,San Luis,96.1,99.2,98.2,91.8,96.3
+Las Heras,Mendoza,95.3,96.3,95.6,91.8,94.8
+Lavalle,Mendoza,95.9,97.3,97.1,91.8,95.5
+Luján,Buenos Aires,97.4,98.1,96.2,91.8,95.9
+Paclín,Catamarca,97.3,97.9,97.8,91.8,96.2
+San Rafael,Mendoza,95.8,96.6,96.1,91.8,95.1
+Capital,Córdoba,97.4,98,96.8,91.7,96
+Chamical,La Rioja,93.8,97.5,97.9,91.7,95.2
+Fray Mamerto Esquiú,Catamarca,95.6,97.8,96.7,91.7,95.5
+Junín,Buenos Aires,97.3,97.2,95.7,91.7,95.5
+San Cayetano,Buenos Aires,96.7,95.6,95.3,91.7,94.8
+Valle Viejo,Catamarca,97.4,98.2,96.6,91.7,96
+Coronel Pringles,Buenos Aires,97.9,97.3,95.9,91.6,95.7
+General Alvear,Mendoza,94.8,95.9,95.6,91.6,94.5
+Jáchal,San Juan,96.6,97.4,97.6,91.6,95.8
+Lomas de Zamora,Buenos Aires,95.2,97.5,95.6,91.6,95
+San Fernando,Chaco,95.3,97.8,96.6,91.6,95.3
+San Nicolás,Buenos Aires,96.2,97.2,95.2,91.6,95.1
+Tercero Arriba,Córdoba,98.2,98.8,97.9,91.6,96.6
+Tilcara,Jujuy,96.4,96.4,95.8,91.6,95.1
+Cañuelas,Buenos Aires,95.2,98,96.4,91.5,95.3
+Gualeguaychú,Entre Ríos,97.9,98.3,97.4,91.5,96.3
+Mercedes,Buenos Aires,97.2,97.6,96.3,91.5,95.7
+Saladillo,Buenos Aires,98.2,98.8,98.3,91.5,96.7
+General Paz,Buenos Aires,99.3,98.5,98,91.4,96.8
+Merlo,Buenos Aires,94.1,98,96.5,91.4,95
+Capital,Corrientes,93.1,96,95.4,91.3,94
+Colón,Córdoba,97.5,98.2,97.1,91.3,96
+General Arenales,Buenos Aires,98.9,98.4,97.6,91.3,96.6
+Mar Chiquita,Buenos Aires,97.3,98,96.9,91.3,95.9
+Marcos Paz,Buenos Aires,94.6,98,96.9,91.3,95.2
+Valle Grande,Jujuy,94,93.5,90.8,91.3,92.4
+Yavi,Jujuy,92.2,95.6,95.4,91.3,93.6
+Esteban Echeverría,Buenos Aires,91.2,97.5,95.9,91.2,94
+Ezeiza,Buenos Aires,94.2,97.6,95.3,91.2,94.6
+Tres Lomas,Buenos Aires,98,98.2,97.8,91.2,96.3
+Adolfo Alsina,Buenos Aires,98.5,98.7,96.8,91.1,96.3
+Capital,Misiones,95,97.4,96.2,91.1,94.9
+Chicoana,Salta,97.4,97.9,96,91.1,95.6
+Moreno,Buenos Aires,92.5,97.7,95.8,91.1,94.3
+Pilar,Buenos Aires,93.2,96.8,95.2,91.1,94.1
+Pomán,Catamarca,96.6,95.3,96.1,91.1,94.8
+Azul,Buenos Aires,96.5,96.9,95.1,91,94.9
+Cerrillos,Salta,94.1,98.2,97.3,91,95.2
+Hucal,La Pampa,100,99.5,99.4,91,97.5
+Monte,Buenos Aires,96.8,97.8,96.5,91,95.5
+Pichi Mahuida,Río Negro,97.3,99,97.5,91,96.2
+Rauch,Buenos Aires,97.9,97.3,95.7,91,95.5
+Rivadavia,San Juan,94.3,94.9,94.8,91,93.8
+Yerba Buena,Tucumán,96.2,97.6,96.7,91,95.4
+Carlos Casares,Buenos Aires,98.5,99.2,97.6,90.9,96.6
+General San Martín,Córdoba,98.2,98.7,97.2,90.8,96.2
+Coronel Dorrego,Buenos Aires,98.8,98.1,96.6,90.7,96.1
+Florentino Ameghino,Buenos Aires,90.3,92.1,93.7,90.7,91.7
+Ischilín,Córdoba,97.8,98.7,97.2,90.7,96.1
+Tinogasta,Catamarca,96.4,97,97,90.7,95.3
+1° de Mayo,Chaco,95.7,97.3,95.7,90.6,94.8
+25 de Mayo,Río Negro,93.5,95.5,91.6,90.6,92.8
+Chacabuco,Buenos Aires,98.2,98.6,96.3,90.6,95.9
+Federal,Entre Ríos,95.2,98.2,96.7,90.6,95.2
+Los Andes,Salta,81.4,97.3,97.2,90.6,91.6
+Victoria,Entre Ríos,97,97.8,97.2,90.6,95.7
+Colón,Entre Ríos,97.2,98.2,97.2,90.5,95.8
+La Paz,Entre Ríos,96.5,98,96.5,90.5,95.4
+Maipú,Mendoza,95.8,96.9,96.1,90.5,94.8
+Coronel Suárez,Buenos Aires,98.3,98.4,96.9,90.4,96
+Trenque Lauquen,Buenos Aires,96.5,97.1,95.6,90.4,94.9
+Benito Juárez,Buenos Aires,97.5,96.8,95.4,90.3,95
+Calingasta,San Juan,97.8,97.5,97.8,90.3,95.9
+Formosa,Formosa,88.4,97.7,96,90.3,93.1
+Presidente Roque Sáenz Peña,Córdoba,98.5,98.9,97.1,90.3,96.2
+Punilla,Córdoba,97,97.9,96.7,90.3,95.5
+San Martín,Mendoza,96.2,96.4,95.6,90.3,94.6
+San Vicente,Buenos Aires,92.1,98.1,96.3,90.3,94.2
+Tornquist,Buenos Aires,98.5,99,97.5,90.3,96.3
+Cafayate,Salta,98.3,98.5,97.5,90.2,96.1
+Florencio Varela,Buenos Aires,90.1,97.1,95.5,90.2,93.2
+General Ortiz de Ocampo,La Rioja,99,97.7,96.1,90.2,95.8
+La Costa,Buenos Aires,95.7,97,96.2,90.2,94.8
+Bolívar,Buenos Aires,98.3,98.1,95.9,90.1,95.6
+Catriló,La Pampa,99.6,99.3,98.8,90.1,97
+Florentino Ameghino,Chubut,98.6,98.9,94.7,90.1,95.6
+Guaminí,Buenos Aires,99.1,98.9,97.5,90.1,96.4
+La Capital,Santa Fe,95.6,96.9,95.1,90.1,94.4
+Río Segundo,Córdoba,98.3,98.5,97.1,90.1,96
+Gastre,Chubut,100,100,100,90,97.5
+Pergamino,Buenos Aires,95.8,96.9,95.1,90,94.5
+General La Madrid,Buenos Aires,98.4,98.9,97.8,89.9,96.3
+Totoral,Córdoba,99,99,96.2,89.9,96
+Tupungato,Mendoza,94.6,96.7,95.7,89.9,94.2
+Uruguay,Entre Ríos,96.5,98.5,97.3,89.9,95.6
+Famatina,La Rioja,97.3,97.4,97.5,89.8,95.5
+Feliciano,Entre Ríos,96.4,96.8,95.2,89.8,94.6
+Pinamar,Buenos Aires,95.9,96.4,94.9,89.8,94.3
+San Justo,Santa Fe,97,97.4,96.3,89.8,95.1
+Unión,Córdoba,98.2,98.8,97.9,89.8,96.2
+Calamuchita,Córdoba,96.4,98.4,97,89.7,95.4
+General Rodríguez,Buenos Aires,95.8,97.6,95.9,89.7,94.8
+José C. Paz,Buenos Aires,91.3,97.2,94.9,89.7,93.3
+San Pedro,Buenos Aires,96.3,98.3,95.5,89.7,95
+Lobos,Buenos Aires,97.9,97.4,96.3,89.6,95.3
+Pila,Buenos Aires,97.6,97.3,93.7,89.6,94.6
+Presidente Perón,Buenos Aires,93.4,97.6,96,89.6,94.2
+San Carlos,Salta,95.5,97.3,92.9,89.6,93.8
+La Poma,Salta,92.3,96.4,94.7,89.5,93.2
+Lincoln,Buenos Aires,96.1,97.7,95.8,89.5,94.8
+Rosario,Santa Fe,95.5,97,95.3,89.5,94.3
+Santa María,Córdoba,96.9,97.5,96.1,89.5,95
+Tumbaya,Jujuy,94.8,97.2,96.9,89.5,94.6
+El Cuy,Río Negro,94,92.3,90.5,89.4,91.6
+Carmen de Areco,Buenos Aires,96.4,97.7,94.3,89.3,94.4
+General Güemes,Salta,92.1,95.8,94.8,89.3,93
+General Juan Facundo Quiroga,La Rioja,97.6,95.6,96.7,89.3,94.8
+Río Cuarto,Córdoba,98.1,98.7,96.9,89.3,95.8
+San Luis del Palmar,Corrientes,91.3,95.2,94.6,89.3,92.6
+Belén,Catamarca,96.1,98.1,94.5,89.2,94.5
+Cochinoca,Jujuy,95.8,96.3,95.7,89.2,94.3
+Constitución,Santa Fe,95.9,97,95.4,89.2,94.4
+Cruz del Eje,Córdoba,96.9,97.9,95.1,89.2,94.8
+Hipólito Yrigoyen,Buenos Aires,96.5,96.3,95.2,89.2,94.3
+La Matanza,Buenos Aires,92.9,96.7,94.4,89.2,93.3
+Santa Rosa,Catamarca,96,98.2,97.6,89.2,95.3
+Diamante,Entre Ríos,96.2,98.3,97,89.1,95.2
+Rawson,San Juan,96,96.7,95.6,89.1,94.4
+San Alberto,Córdoba,97.2,97.9,96.6,89.1,95.2
+25 de Mayo,Buenos Aires,97.6,98.3,96.5,89,95.4
+Ayacucho,San Luis,94.6,96.9,95.3,89,94
+Caseros,Santa Fe,97.8,98.2,96.6,89,95.4
+Navarro,Buenos Aires,96.4,97.4,95.3,89,94.5
+Rosario de la Frontera,Salta,95.3,97,94.8,89,94
+Tala,Entre Ríos,97.3,98,96.1,89,95.1
+Arrecifes,Buenos Aires,98.4,98.7,96.2,88.9,95.6
+Belgrano,San Luis,91.6,96.3,96.3,88.9,93.3
+Chimbas,San Juan,95,96.1,94.7,88.9,93.7
+Huiliches,Neuquén,91.6,92.6,94.1,88.9,91.8
+Angaco,San Juan,95.8,98.1,97.2,88.8,95
+Juárez Celman,Córdoba,98.6,99.2,97.9,88.8,96.1
+Ledesma,Jujuy,92.7,95.8,94.9,88.8,93.1
+Sanagasta,La Rioja,94.2,93.4,93.9,88.8,92.6
+Ambato,Catamarca,98.8,96.7,96.3,88.7,95.1
+Capital,Tucumán,92.8,96.5,94.9,88.7,93.2
+Las Flores,Buenos Aires,95.7,97.7,94.6,88.7,94.2
+San Justo,Córdoba,98.3,98.5,96.3,88.7,95.5
+Susques,Jujuy,89,97.9,96,88.7,92.9
+Capital,Santiago del Estero,96.3,97.2,95.5,88.6,94.4
+Empedrado,Corrientes,94.8,97.1,94.7,88.6,93.8
+Iglesia,San Juan,95.3,97.6,96,88.6,94.4
+Iriondo,Santa Fe,97.6,97.6,95.5,88.6,94.8
+Libertador General San Martín,San Luis,89.5,94.9,94.9,88.6,92
+Paso de los Libres,Corrientes,92.6,97.1,95.1,88.6,93.4
+Río Primero,Córdoba,96.4,97.8,95.6,88.6,94.6
+Rosario Vera Peñaloza,La Rioja,97.3,96.9,96,88.6,94.7
+Salto,Buenos Aires,95.9,96.5,94.6,88.6,93.9
+Tunuyán,Mendoza,95.4,96.3,95.8,88.6,94
+Islas del Ibicuy,Entre Ríos,96.2,97.8,95.2,88.5,94.4
+Suipacha,Buenos Aires,95,97,95.6,88.5,94
+Santa Lucía,San Juan,93.8,94,93.3,88.4,92.4
+Villarino,Buenos Aires,98.6,98.7,96.2,88.4,95.5
+Añelo,Neuquén,92,97.2,96.4,88.3,93.5
+Bragado,Buenos Aires,96.7,96.8,93.9,88.3,93.9
+Junín,San Luis,96.4,98.1,97.2,88.3,95
+Loncopué,Neuquén,97.3,99,97,88.3,95.4
+Caucete,San Juan,95.9,97,96.7,88.2,94.5
+Tordillo,Buenos Aires,93,98.1,94.6,88.2,93.5
+Castellanos,Santa Fe,97.7,98.1,96.4,88.1,95.1
+Concordia,Entre Ríos,92.9,97.7,96.2,88.1,93.7
+Leandro N. Alem,Buenos Aires,97.5,98.5,96.7,88.1,95.2
+Marcos Juárez,Córdoba,98.4,98.6,96.4,88.1,95.4
+Pellegrini,Buenos Aires,95,97.5,96.1,88.1,94.2
+San Cosme,Corrientes,88.8,96,95.1,88.1,92
+Andalgalá,Catamarca,95.7,96.6,94.3,88,93.7
+Pilagás,Formosa,83.4,96.3,93.9,88,90.4
+Rivadavia,Buenos Aires,96.8,96.1,94,88,93.7
+Rosario de Lerma,Salta,90.8,98,96.6,88,93.4
+Alberti,Buenos Aires,97.9,95.9,94.1,87.9,94
+Chapaleufú,La Pampa,97.8,99.3,99.7,87.9,96.2
+La Paz,Catamarca,95,97.1,95.3,87.9,93.8
+Villaguay,Entre Ríos,96.2,97.7,95.7,87.9,94.4
+Conesa,Río Negro,97.3,97.9,97.3,87.8,95.1
+San Javier,Córdoba,96.4,98.2,96.2,87.7,94.6
+General Pinto,Buenos Aires,96.2,94.3,93.7,87.6,93
+Laishi,Formosa,85,97.7,96.1,87.6,91.6
+Laprida,Buenos Aires,97.1,98.2,96.2,87.6,94.8
+Pocho,Córdoba,97.9,97.7,94.5,87.6,94.4
+San Jerónimo,Santa Fe,95.7,97.1,95.5,87.6,94
+Chilecito,La Rioja,96.9,97.7,96.5,87.5,94.7
+General Alvear,Corrientes,91.1,96.2,95.4,87.5,92.6
+Molinos,Salta,95.2,98.7,92.6,87.5,93.5
+Saladas,Corrientes,86,94.2,93.1,87.5,90.2
+Arauco,La Rioja,96.8,97.9,94.8,87.3,94.2
+Bermejo,Chaco,89.7,97.4,94.9,87.3,92.3
+Berón de Astrada,Corrientes,94.2,95.5,92.4,87.3,92.4
+Monteros,Tucumán,96.2,97.4,95.1,87.2,94
+El Carmen,Jujuy,92.5,95.7,94.2,87,92.4
+General Villegas,Buenos Aires,96.4,96,93.4,87,93.2
+Sargento Cabral,Chaco,95.2,97.8,94,87,93.5
+Independencia,La Rioja,97.6,98.3,95.7,86.9,94.6
+Santo Tomé,Corrientes,88.6,96.3,94.8,86.9,91.7
+Sobremonte,Córdoba,95,97.8,96.9,86.9,94.2
+Tafí Viejo,Tucumán,93.6,96.6,94.7,86.9,93
+Nogoyá,Entre Ríos,97.1,97.4,95.7,86.8,94.3
+San Martín,San Juan,95.7,95.9,93,86.8,92.9
+Chacabuco,San Luis,95.5,95.1,93.4,86.7,92.7
+General Donovan,Chaco,96.9,97.5,94.4,86.7,93.9
+Las Colonias,Santa Fe,97.5,98,96.1,86.7,94.6
+Metán,Salta,93.7,95.2,93.9,86.7,92.4
+Daireaux,Buenos Aires,96.8,97.8,96,86.6,94.3
+Eldorado,Misiones,89.5,98,95.7,86.6,92.5
+General Roca,Córdoba,98.2,98.8,97.5,86.6,95.3
+Minas,Córdoba,97.8,97.9,92.5,86.6,93.7
+Fray Justo Santa María de Oro,Chaco,94.8,95.4,92.5,86.5,92.3
+Humahuaca,Jujuy,89.5,91.1,90.9,86.4,89.5
+San Lorenzo,Santa Fe,96.3,98,95.9,86.4,94.2
+Albardón,San Juan,95.4,96.7,94.8,86.3,93.3
+Comandante Fernández,Chaco,92.8,97,94.9,86.3,92.8
+Goya,Corrientes,93.8,96.3,93.9,86.3,92.6
+Gualeguay,Entre Ríos,97.3,98.3,96.3,86.3,94.6
+Pirané,Formosa,85.1,97.1,94.5,86.3,90.8
+San Salvador,Entre Ríos,95.4,97.8,95.5,86.3,93.8
+General San Martín,La Rioja,95,98.9,97.3,86.2,94.4
+Santa Bárbara,Jujuy,91.8,96.6,94.3,86.2,92.2
+Valle Fértil,San Juan,94.3,95.5,93.8,86.2,92.5
+Pilcomayo,Formosa,82.2,97.1,94.9,86.1,90.1
+Mercedes,Corrientes,93.9,96.2,94.1,86,92.6
+Belgrano,Santa Fe,96.5,97.9,96.3,85.9,94.2
+Ituzaingó,Corrientes,92.9,96.3,94.8,85.7,92.4
+El Alto,Catamarca,95.2,97.3,93.6,85.6,92.9
+Juan Bautista Alberdi,Tucumán,96.4,97,95.2,85.6,93.6
+Leales,Tucumán,92.2,95.5,95,85.6,92.1
+Pehuajó,Buenos Aires,93.7,95.2,91.7,85.6,91.6
+Cachi,Salta,95.7,98.8,96.7,85.5,94.2
+General Paz,Corrientes,91.3,95.5,94,85.5,91.6
+Simoca,Tucumán,93.1,94.6,93,85.5,91.6
+Tulumba,Córdoba,95.4,96.4,92.1,85.5,92.4
+25 de Mayo,San Juan,95,96.3,96.1,85.4,93.2
+General López,Santa Fe,97.5,98.2,95.7,85.4,94.2
+Tafí del Valle,Tucumán,91.9,94.8,93.8,85.4,91.5
+Chicligasta,Tucumán,93.1,96.6,93.8,85.3,92.2
+General Obligado,Santa Fe,94.3,96.1,93.7,85.3,92.4
+Mayor Luis J. Fontana,Chaco,94.1,96.9,93.1,85.3,92.4
+Libertador General San Martín,Misiones,92.3,97.4,94.5,85.1,92.3
+Candelaria,Misiones,92,96.8,95.6,84.9,92.3
+Iruya,Salta,88.8,91.5,87.3,84.9,88.1
+Choya,Santiago del Estero,97,97,94.9,84.8,93.4
+Lules,Tucumán,93.7,96.4,94.2,84.8,92.3
+Ñorquinco,Río Negro,95.6,97.6,93,84.8,92.8
+Vera,Santa Fe,95.2,95.5,93.4,84.8,92.2
+Bella Vista,Corrientes,93.9,96.3,94.3,84.7,92.3
+Montecarlo,Misiones,92.6,97,94.1,84.7,92.1
+Patiño,Formosa,83.6,96.4,94.2,84.7,89.7
+Zonda,San Juan,93.4,95.8,95,84.7,92.2
+General José de San Martín,Salta,90,96.3,92.7,84.6,90.9
+Libertad,Chaco,93.1,97,94,84.5,92.2
+Monte Caseros,Corrientes,89.9,95.4,93,84.5,90.7
+Curuzú Cuatiá,Corrientes,91.2,96.8,94.9,84.4,91.8
+Graneros,Tucumán,92.6,94.5,93.1,84.3,91.1
+Orán,Salta,86.9,95.5,91.8,84.2,89.6
+Santa Victoria,Salta,90.1,93.4,87.2,84.2,88.7
+La Candelaria,Salta,86.4,89.8,89.8,84.1,87.5
+San Miguel,Corrientes,90.4,95.4,92.2,84.1,90.5
+Capayán,Catamarca,95.8,96.5,95.5,84,93
+Catán Lil,Neuquén,78.3,90.2,89.3,83.9,85.4
+San Martín,Santa Fe,97.9,98.6,94.9,83.9,93.8
+Mburucuyá,Corrientes,92.9,95.9,93,83.8,91.4
+Castro Barros,La Rioja,90.7,92.4,94.2,83.7,90.3
+San Martín,Corrientes,92.9,94.9,94.7,83.6,91.5
+Pocito,San Juan,94.1,95.7,93,83.3,91.5
+San Ignacio,Misiones,92.9,97.2,94.9,83.3,92.1
+9 de Julio,San Juan,92.9,94.1,93,83.2,90.8
+La Cocha,Tucumán,94.4,98,94.1,83.2,92.4
+Sarmiento,San Juan,94.4,96.2,95.6,83.2,92.4
+Chacabuco,Chaco,93.2,96.9,92.5,83.1,91.4
+12 de Octubre,Chaco,95.8,98.1,94.4,83,92.8
+Leandro N. Alem,Misiones,91.9,96.5,92.1,83,90.9
+Río Seco,Córdoba,97.8,98.2,93.7,82.8,93.1
+Santa Catalina,Jujuy,84.3,86.8,84.6,82.8,84.6
+Federación,Entre Ríos,96.6,97.5,95.1,82.7,93
+Famaillá,Tucumán,90.9,96.4,92.8,82.6,90.7
+General Viamonte,Buenos Aires,87,88.3,88.1,82.6,86.5
+Antofagasta de la Sierra,Catamarca,93.5,98,94.7,82.4,92.2
+Banda,Santiago del Estero,95.1,96.3,92.4,82.4,91.6
+Cruz Alta,Tucumán,93.8,96.8,94.2,82.4,91.8
+Libertador General San Martín,Chaco,88.7,95.3,91.9,82.4,89.6
+Belgrano,Santiago del Estero,93.5,95.8,93.7,82.3,91.3
+Iguazú,Misiones,90,95.8,93.3,82.3,90.4
+Río Chico,Tucumán,94.2,95.8,93.1,82.3,91.4
+Ullum,San Juan,95.8,97.6,96.8,82.3,93.1
+Carlos Tejedor,Buenos Aires,96.9,96.6,93.2,82,92.2
+Guasayán,Santiago del Estero,94.1,95.8,90,82,90.5
+9 de Julio,Santa Fe,97.5,97.7,94.1,81.7,92.8
+Apóstoles,Misiones,93.7,97.6,95.5,81.7,92.1
+Gobernador Dupuy,San Luis,91.4,97.1,90.5,81.7,90.2
+San Cristóbal,Santa Fe,96.1,97.4,94.5,81.6,92.4
+San Javier,Santa Fe,94.7,96.2,93.1,81.5,91.4
+San Roque,Corrientes,91.8,95.6,93,81.3,90.4
+Rivadavia,Santiago del Estero,97.2,98.4,96.7,81.2,93.4
+Oberá,Misiones,93.6,96.9,93,81,91.1
+25 de Mayo,Chaco,90.4,96.2,93.1,80.9,90.2
+Garay,Santa Fe,96.4,97.3,92.9,80.9,91.9
+Presidencia de la Plaza,Chaco,92.7,97.9,95.1,80.9,91.7
+Trancas,Tucumán,92.7,94.2,91.4,80.9,89.8
+Quitilipi,Chaco,86.4,95.8,92,80.7,88.7
+Anta,Salta,89.3,94.2,89.4,80.4,88.3
+Loreto,Santiago del Estero,96.1,95.9,93.2,80.4,91.4
+2 de Abril,Chaco,92.6,96.9,92.8,80.1,90.6
+Sauce,Corrientes,95.1,95.9,93,80.1,91
+San Lorenzo,Chaco,86.7,95.8,90.6,80,88.3
+O'Higgins,Chaco,93.6,97.8,94.3,79.9,91.4
+9 de Julio,Chaco,93,96,91,79.7,89.9
+Tapenagá,Chaco,89.1,97.7,94,79.7,90.1
+Matacos,Formosa,81.1,95.6,92.1,79.6,87.1
+Esquina,Corrientes,90.6,90.8,87,79.4,87
+General Güemes,Chaco,87.3,94.1,91.3,79.4,88
+Ancasti,Catamarca,89.8,93.7,89.8,79.3,88.2
+Paso de Indios,Chubut,94.8,100,97.2,78.9,92.7
+San Javier,Misiones,91.5,95.7,88.3,77.3,88.2
+Burruyacú,Tucumán,94.4,95.1,91.9,77.1,89.6
+Lavalle,Corrientes,91.9,94.7,91,77,88.7
+Maipú,Chaco,87.3,95.9,91.7,76.5,87.9
+Bermejo,Formosa,88,95,88.4,76.3,86.9
+Concepción,Misiones,87.9,94.8,88.1,76.2,86.8
+Jiménez,Santiago del Estero,93.3,97.9,91.3,76.1,89.7
+Aguirre,Santiago del Estero,91.7,96.6,89.7,75.8,88.5
+Concepción,Corrientes,89.6,95.7,92.1,75.8,88.3
+Guatraché,La Pampa,78.5,74.6,76.3,75.8,76.3
+Almirante Brown,Chaco,90.1,96.8,92.3,75.5,88.7
+Atamisqui,Santiago del Estero,94.8,96.3,90.2,75.5,89.2
+Juan Felipe Ibarra,Santiago del Estero,91.4,96.4,91.4,75.5,88.7
+Río Hondo,Santiago del Estero,94.3,96.9,91.4,75.3,89.5
+Robles,Santiago del Estero,94,96.3,89.6,74.2,88.5
+Ramón Lista,Formosa,81.1,95.8,88.3,73.7,84.7
+Cainguás,Misiones,90.8,96.9,90.3,73.4,87.9
+General Belgrano,Chaco,85,95.1,89.1,72.4,85.4
+Copo,Santiago del Estero,87.1,95.5,90.4,72.2,86.3
+Silípica,Santiago del Estero,96,98.1,92.2,72,89.6
+Ojo de Agua,Santiago del Estero,93.8,96.2,87.4,71.2,87.2
+Mitre,Santiago del Estero,94.3,97.5,87,70,87.2
+San Martín,Santiago del Estero,95.2,96,90.3,69.7,87.8
+General Manuel Belgrano,Misiones,86.4,94.5,89.3,69.1,84.8
+Moreno,Santiago del Estero,92.6,95.3,87,69,86
+Independencia,Chaco,90.8,95.9,87.9,68.4,85.8
+General Taboada,Santiago del Estero,90.4,96.1,86.3,67.6,85.1
+Figueroa,Santiago del Estero,92,94.8,86.9,67,85.2
+Guaraní,Misiones,81.1,94.7,86.2,66.1,82
+Avellaneda,Santiago del Estero,89.6,96.7,87.4,65.8,84.9
+Pellegrini,Santiago del Estero,93,95.9,88,65.4,85.6
+25 de Mayo,Misiones,85.7,94.1,86.5,65.3,82.9
+Rivadavia,Salta,87.1,93.1,83.6,64.9,82.2
+San Pedro,Misiones,81,94.1,83.8,64.6,80.9
+Salavina,Santiago del Estero,92.1,95.6,84.2,62.8,83.7
+Quebrachos,Santiago del Estero,86.5,93.7,83,62.1,81.3
+Alberdi,Santiago del Estero,84,94.2,84.6,60.9,80.9
+Sarmiento,Santiago del Estero,94,94.9,86.4,60.5,84
